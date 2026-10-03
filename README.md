@@ -9,7 +9,7 @@ The project demonstrates data ingestion, transformation, data quality validation
 
 ## 🏗️ Architecture
 
-
+```text
 Synthetic Banking CSV Files
             |
             v
@@ -42,7 +42,7 @@ Synthetic Banking CSV Files
             v
    Analytics-Ready Tables
 
-
+```
 ---
 
 ## 🛠️ Technologies Used
@@ -71,7 +71,7 @@ Synthetic banking data was generated for this project.
 
 ### Data Relationships
 
-
+```
 Customers
     |
     | customer_id
@@ -82,7 +82,7 @@ Accounts
     v
 Transactions
 
-
+```
 ---
 
 ## 🔄 Data Pipeline
@@ -234,7 +234,7 @@ Azure Data Factory orchestrates the Databricks processing notebooks.
 
 The final pipeline is:
 
-
+```
 silver_layer
       |
       v
@@ -245,7 +245,7 @@ SCDType2_Production
       |
       v
 gold_layer
-
+```
 
 Each activity runs sequentially after the successful completion of the previous activity.
 
@@ -279,7 +279,7 @@ The project includes the following notebooks:
 
 ## 📁 Project Structure
 
-
+```
 azure-banking-transaction-analytics/
 │
 ├── data/
@@ -311,7 +311,7 @@ azure-banking-transaction-analytics/
 │
 └── README.md
 
-
+```
 ---
 
 ## 🎯 Key Data Engineering Concepts
