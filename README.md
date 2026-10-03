@@ -303,10 +303,10 @@ azure-banking-transaction-analytics/
 ├── screenshots/
 │   ├── adls_raw.png
 │   ├── bronze_tables.png
-│   ├── silver_tables.png
+│   ├── unity catalog.png
 │   ├── data_quality.png
 │   ├── scd_type2.png
-│   ├── gold_tables.png
+│   ├── gold_layer.png
 │   └── adf_pipeline.png
 │
 └── README.md
