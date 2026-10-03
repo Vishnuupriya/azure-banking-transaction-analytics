@@ -1,4 +1,4 @@
-````markdown
+
 # Azure Banking Transaction Analytics Lakehouse
 
 An end-to-end Azure Data Engineering project that implements a modern banking analytics lakehouse using Azure Data Lake Storage Gen2, Azure Data Factory, Azure Databricks, PySpark, Spark SQL, and Delta Lake.
@@ -9,7 +9,7 @@ The project demonstrates data ingestion, transformation, data quality validation
 
 ## 🏗️ Architecture
 
-```text
+
 Synthetic Banking CSV Files
             |
             v
@@ -41,7 +41,7 @@ Synthetic Banking CSV Files
             |
             v
    Analytics-Ready Tables
-````
+
 
 ---
 
@@ -71,7 +71,7 @@ Synthetic banking data was generated for this project.
 
 ### Data Relationships
 
-```text
+
 Customers
     |
     | customer_id
@@ -81,7 +81,7 @@ Accounts
     | account_id
     v
 Transactions
-```
+
 
 ---
 
@@ -91,23 +91,23 @@ Transactions
 
 The four CSV files are uploaded to an Azure Data Lake Storage Gen2 `raw` container.
 
-```text
+
 customers.csv
 accounts.csv
 transactions.csv
 branches.csv
-```
+
 
 ### 2. Bronze Layer
 
 Raw data is loaded into Databricks Bronze tables and stored using Delta format.
 
-```text
+
 bronze_customers
 bronze_accounts
 bronze_transactions
 bronze_branches
-```
+
 
 ### 3. Silver Layer
 
@@ -122,12 +122,12 @@ Operations include:
 
 Silver tables:
 
-```text
+
 silver_customers
 silver_accounts
 silver_transactions
 silver_branches
-```
+
 
 ---
 
@@ -145,7 +145,7 @@ Slowly Changing Dimension Type 2 is implemented for customer data to preserve hi
 
 The customer dimension maintains:
 
-```text
+
 customer_id
 name
 city
@@ -153,13 +153,13 @@ state
 effective_start_date
 effective_end_date
 is_current
-```
+
 
 When tracked customer attributes change, the previous record is closed and a new current version is created.
 
 Example:
 
-```text
+
 Customer 1001
 
 Version 1
@@ -171,7 +171,7 @@ is_current = false
 Version 2
 City = Bangalore
 is_current = true
-```
+
 
 This preserves customer history instead of overwriting previous values.
 
@@ -234,7 +234,7 @@ Azure Data Factory orchestrates the Databricks processing notebooks.
 
 The final pipeline is:
 
-```text
+
 silver_layer
       |
       v
@@ -245,7 +245,7 @@ SCDType2_Production
       |
       v
 gold_layer
-```
+
 
 Each activity runs sequentially after the successful completion of the previous activity.
 
@@ -257,14 +257,14 @@ The complete pipeline was successfully executed with all activities completing s
 
 The project includes the following notebooks:
 
-```text
+
 01_bronze_ingestion_code
 02_silver_layer
 03_silver_data_quality_check
 04_SCDType2- Checks
 05_SCDType2_Production
 06_gold_layer
-```
+
 
 | Notebook                       | Purpose                                |
 | -------------------------------| -------------------------------------- |
@@ -279,7 +279,7 @@ The project includes the following notebooks:
 
 ## 📁 Project Structure
 
-```text
+
 azure-banking-transaction-analytics/
 │
 ├── data/
@@ -310,7 +310,7 @@ azure-banking-transaction-analytics/
 │   └── adf_pipeline.png
 │
 └── README.md
-```
+
 
 ---
 
@@ -349,7 +349,4 @@ Azure Data Factory orchestrates the Databricks processing workflow across the Br
 **Vishnuu Priya**
 
 Azure Data Engineer | Azure | Databricks | PySpark | SQL
-
-```
-```
 
